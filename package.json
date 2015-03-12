@@ -1,0 +1,15 @@
+{
+  "name": "MEANproject",
+  "version": "1.0.0",
+  "description": "Code School/Pluralsight - MEAN App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hrvoje Bresic",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "express": "^4.12.2",
+    "jade": "^1.9.2"
+  }
+}
