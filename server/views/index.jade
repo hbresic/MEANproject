@@ -1,5 +1,6 @@
 extend ../includes/layout
 
 block main-content
-	section.content
-		h1 Hello World
+  section.content
+    div(ng-view)
+  h2= mongoMessage
