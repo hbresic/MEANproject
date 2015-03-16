@@ -25,7 +25,11 @@ app.use(stylus.middleware(
 ));
 app.use(express.static(__dirname + '/public'));
 
-mongoose.connect('mongodb://localhost/MEANproject');
+if (env === 'development') {
+  mongoose.connect('mongodb://localhost/MEANproject');
+} else {
+  mongoose.connect('mongodb://hbresic:meanproject@ds031711.mongolab.com:31711/meanproject');
+}
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error...'));
 db.once('open', function callback(){
@@ -49,7 +53,7 @@ app.get('*', function(req,res) {
   });
 });
 
-var port = 3030;
+var port = process.env.PORT || 3030;
 app.listen(port);
 
 console.log('Listening on port ' + port + '...');
