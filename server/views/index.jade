@@ -1,6 +1,17 @@
 extend ../includes/layout
 
 block main-content
+  .navbar.navbar-inverse.navbar-fixedtop
+    .container
+      .navbar-header
+          a.navbar-brand(href="/") MEANproject
+            h6 - Code School/Plural Sight tutorial
+      .navbar-collapse.collapse
+        ul.nav.navbar-nav
+          li
+            a(href="/") Home
   section.content
     div(ng-view)
   h2= mongoMessage
+  footer.container.text-center
+    p &copy; 2015 MEANproject - Code School/Plural Sight
