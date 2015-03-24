@@ -42,7 +42,7 @@ module.exports = function(config) {
       hash = hashPwd(salt, 'bob');
       User.create({
         firstName: 'Bob',
-        lastName: 'Dilan',
+        lastName: 'Dylan',
         username: 'bob',
         salt: salt,
         hashed_pwd: hash,
