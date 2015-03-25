@@ -3,15 +3,15 @@ angular.module('app').controller('mvNavBarLoginCtrl', function($scope, $http, mv
   $scope.signin = function(username, password) {
     mvAuth.authenticateUser(username, password).then(function(success) {
       if (success) {
-        /* //Disabled due Toastr/Angular bug
-        mvNotifier.notify('You have successfully signed in!');*/
+         //Disabled due Toastr/Angular bug
         console.log("This code doesn't run {mvNotifier.notify('You have successfully signed in!');}");
-        alert('You are signed in!');
+        mvNotifier.notify('You have successfully signed in!');
+        // alert('You are signed in!');
       } else {
-        /* // Disabled due Toastr/Angular bug
-        mvNotifier.notify('Username/Password combination incorrect');*/
+         // Disabled due Toastr/Angular bug
         console.log("This code doesn't run {mvNotifier.notify('Username/Password combination incorrect');}");
-        alert('Incorrect username or password');
+        mvNotifier.notify('Username/Password combination incorrect');
+        // alert('Incorrect username or password');
       }
     });
   };
@@ -19,10 +19,10 @@ angular.module('app').controller('mvNavBarLoginCtrl', function($scope, $http, mv
     mvAuth.logoutUser().then(function() {
       $scope.username = "";
       $scope.password = "";
-          /* //Disabled due Toastr/Angular bug
-      mvNotifier.notify('You have been successfully signed out!');*/
+           //Disabled due Toastr/Angular bug
       console.log("This code doesn't run {mvNotifier.notify('You have been successfully signed out!');}");
-      alert('You are signed out!');
+      mvNotifier.notify('You have been successfully signed out!');
+      // alert('You are signed out!');
       $location.path('/');
     });
   };
