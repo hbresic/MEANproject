@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "enines": {
+  "engines": {
     "node": "0.12.x",
     "npm": "2.5.x"
   },
